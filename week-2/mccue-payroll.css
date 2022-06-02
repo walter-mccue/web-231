@@ -1,0 +1,12 @@
+/**
+Title: payroll.css
+Author: Walter McCue
+Date: 06/02/22
+Description: Styling for payroll.html
+*/
+body {
+    font-family: 'Oswald', Verdana, Arial, sans-serif;
+}
+ul {
+    border: 1px dotted red;
+}
