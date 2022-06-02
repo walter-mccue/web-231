@@ -3,6 +3,7 @@ Title: global.css
 Author: Walter McCue
 Date: 05/26/22
 Description: This is a copy of the styling code I (Walter McCue) wrote from WEB 200 that will be used in this repository.
+Modified: 06/01/22
 */
 .card {
     box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
@@ -55,4 +56,18 @@ Description: This is a copy of the styling code I (Walter McCue) wrote from WEB 
 }
 .form-field {
     padding: 20px;
+}
+/**
+The following was added during Week 2 and modifies links that return to the index page
+*/
+a.return-home {
+    color: #4f3674;
+    text-decoration: none;
+}
+a:visited.return-home {
+    color: #3c275a;
+}
+a:hover.return-home{
+    color: #4f3674;
+    background-color: #d6a800;
 }
