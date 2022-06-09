@@ -1,0 +1,14 @@
+/**
+Title: mccue-temp-conversion.css
+Author: Walter McCue
+Date: 06/08/22
+Description: Styling for mccue-temp-conversion.html
+*/
+body {
+    font-family: 'Oswald', Verdana, Arial, sans-serif;
+}
+#card-content {
+    text-align: center;
+    font-size: 28px;
+    padding-bottom: 20px;
+}
