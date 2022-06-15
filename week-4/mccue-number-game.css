@@ -1,0 +1,14 @@
+/**
+Title: mccue-number-game.css
+Author: Walter McCue
+Date: 06/15/22
+Description: Styling for mccue-number-game.html
+*/
+body {
+    font-family: 'Oswald', Verdana, Arial, sans-serif;
+}
+#card-content {
+    text-align: center;
+    font-size: 28px;
+    padding-bottom: 20px;
+}
