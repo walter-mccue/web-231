@@ -3,7 +3,7 @@ Title: global.css
 Author: Walter McCue
 Date: 05/26/22
 Description: This is a copy of the styling code I (Walter McCue) wrote from WEB 200 that will be used in this repository.
-Modified: 06/01/22
+Modified: 06/01/22, 06/26/22
 */
 .card {
     box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
@@ -70,4 +70,14 @@ a:visited.return-home {
 a:hover.return-home{
     color: #4f3674;
     background-color: #d6a800;
+}
+/**
+The following was added during week 5
+*/
+.drop-down-menu {
+    padding: 12px 20px;
+    margin: 8px 0px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
 }
