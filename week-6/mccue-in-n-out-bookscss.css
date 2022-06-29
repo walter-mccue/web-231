@@ -1,0 +1,35 @@
+/**
+Title: mccue-in-n-out-books.css
+Author: Walter McCue
+Date: 06/29/22
+Description: Styling for mccue-in-n-out-books.html
+*/
+body {
+    font-family: 'Oswald', Verdana, Arial, sans-serif;
+}
+#card-content {
+    text-align: center;
+    font-size: 28px;
+    padding-bottom: 20px;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 30px;
+    padding: 30px;
+}
+th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4F3674;
+    color: white;
+}
+td, th {
+    border: 1px solid #ddd;
+}
+tr:hover {
+    background-color: #d6a800;
+    color: #4F3674;
+    cursor: pointer;
+}

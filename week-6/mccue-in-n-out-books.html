@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!--
+            Title: mccue-in-n-out-books.html
+            Author: Walter McCue
+            Date: 06/29/22
+            Description: This assignment will show that I understand how to use javascript object literals.
+            References: https://www.w3schools.com/ ; WEB 231 GitHub Repository
+        -->
+        <title>WEB 231 - Enterprise JavaScript I</title>
+        <link href="mccue-in-n-out-bookscss.css" type="text/css" rel="stylesheet" />
+        <link href="../global.css" type="text/css" rel="stylesheet" />
+        <link href="../site.css" type="text/css" rel="stylesheet" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <h1 class="app-header">Welcome to In-N-Out-Books</h1>
+        <!--copied the container/card div layout from mccue-sequence-game.html and changed values as needed-->
+        <div id="container">
+            <div class="card">
+                <div class="card-title">
+                    My Favorites
+                </div>
+                <div class="card-content">
+                    <div class="form">
+                        <div class="form-field">
+                            <label for="favoriteList">Choose a listing:</label>
+                            <select id="favoriteList" class="drop-down-menu" name="favoriteList">
+                                <option value="select">--Select--</option>
+                                <option value="books">Top 3 Favorite Books</option>
+                                <option value="authors">Top 3 Favorite Authors</option>
+                            </select>
+                        </div>
+                        <div class="form-field">
+                            <button type="submit" class="btn btn-primary full-width" id="btnDisplayListing" onclick="btnDisplayListing()">Display Listing</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="return-home" href="../index.html">Return</a>
+        <br><br>
+        <!--copied the div layout structure from my WEB-200 directory for both of the following table structures-->
+        <div class="card" id="favorite-books">
+            <div class="card-title">
+                Top 3 Favorite Books
+            </div>
+            <div class="card-content">
+                <table id="bookTable">
+                    <tr>
+                        <th>ISBN</th>
+                        <th>Title</th>
+                        <th>Pages</th>
+                    </tr>
+                    <tr>
+                        <td id="txtArmorISBN"></td>
+                        <td id="txtArmorTitle"></td>
+                        <td id="txtArmorPages"></td>
+                    </tr>
+                    <tr>
+                        <td id="txtDoomISBN"></td>
+                        <td id="txtDoomTitle"></td>
+                        <td id="txtDoomPages"></td>
+                    </tr>
+                    <tr>
+                        <td id="txtMobyISBN"></td>
+                        <td id="txtMobyTitle"></td>
+                        <td id="txtMobyPages"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="card" id="favorite-authors">
+            <div class="card-title">
+                Top 3 Favorite Authors
+            </div>
+            <div class="card-content">
+                <table id="authorTable">
+                    <tr>
+                        <th>Name</th>
+                        <th>Genre</th>
+                    </tr>
+                    <tr>
+                        <td id="txtKingName"></td>
+                        <td id="txtKingGenre"></td>
+                    </tr>
+                    <tr>
+                        <td id="txtClancyName"></td>
+                        <td id="txtClancyGenre"></td>
+                    </tr>
+                    <tr>
+                        <td id="txtMartinName"></td>
+                        <td id="txtMartinGenre"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <script>
+        // each declaration creates an object with the variables listed in the tables
+            let book1 = {
+                isbn: '978-0756417086',
+                title: 'Armor',
+                pages: '432',
+            };
+            let book2 = {
+                isbn: '978-1935169390',
+                title: 'The Doom Stone',
+                pages: '192',
+            };
+            let book3 = {
+                isbn: '978-1503280786',
+                title: 'Moby Dick',
+                pages: '378',
+            };
+            let author1 = {
+                name: 'Stephen King',
+                genre: 'Horror',
+            };
+            let author2 = {
+                name: 'Tom Clancy',
+                genre: 'Thriller',
+            };
+            let author3 = {
+                name: 'George RR Martin',
+                genre: 'Fantasy',
+            };
+        // places the above values in the correct places in the tables
+            document.getElementById('txtArmorISBN').innerHTML = book1.isbn;
+            document.getElementById('txtArmorTitle').innerHTML = book1.title;
+            document.getElementById('txtArmorPages').innerHTML = book1.pages;
+            document.getElementById('txtDoomISBN').innerHTML = book2.isbn;
+            document.getElementById('txtDoomTitle').innerHTML = book2.title;
+            document.getElementById('txtDoomPages').innerHTML = book2.pages;
+            document.getElementById('txtMobyISBN').innerHTML = book3.isbn;
+            document.getElementById('txtMobyTitle').innerHTML = book3.title;
+            document.getElementById('txtMobyPages').innerHTML = book3.pages;
+            document.getElementById('txtKingName').innerHTML = author1.name;
+            document.getElementById('txtKingGenre').innerHTML = author1.genre;
+            document.getElementById('txtClancyName').innerHTML = author2.name;
+            document.getElementById('txtClancyGenre').innerHTML = author2.genre;
+            document.getElementById('txtMartinName').innerHTML = author3.name;
+            document.getElementById('txtMartinGenre').innerHTML = author3.genre;
+        // declares both div-tables as variables and does not display them on page load
+            let book = document.getElementById('favorite-books');
+            let author = document.getElementById('favorite-authors');
+            book.style.display='none';
+            author.style.display='none';
+        // captures the users choice and displays the appropriate table or message
+            document.getElementById('btnDisplayListing').onclick = function() {
+            let choice = document.getElementById('favoriteList').value; 
+                if (choice == 'books') {
+                    book.style.display='block';
+                    author.style.display='none';
+                }
+                else if (choice == 'authors') {
+                    book.style.display='none';
+                    author.style.display='block';
+                }
+                else {
+                    alert("Invalid selection, please try again!");
+                }
+            };
+        </script>
+    </body>
+</html>
