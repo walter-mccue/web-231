@@ -1,0 +1,39 @@
+/**
+Title: mccue-javazon.css
+Author: Walter McCue
+Date: 06/29/22
+Description: Styling for mccue-javazon.html
+*/
+body {
+    font-family: 'Oswald', Verdana, Arial, sans-serif;
+}
+#card-content {
+    text-align: center;
+    font-size: 28px;
+    padding-bottom: 20px;
+}
+/** Table Formatting */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 30px;
+    padding: 30px;
+}
+/** Table Header Formatting */
+th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4F3674;
+    color: white;
+}
+/** Table Data and Header Formatting */
+td, th {
+    border: 1px solid #ddd;
+}
+/** Table Formatting when the mouse hovers over a row */
+tr:hover {
+    background-color: #d6a800;
+    color: #4F3674;
+    cursor: pointer;
+}
