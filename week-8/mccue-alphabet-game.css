@@ -1,0 +1,21 @@
+/**
+Title: mccue-alphabet-game.css
+Author: Walter McCue
+Date: 07/17/22
+Description: Styling for mccue-alphabet-game.html
+*/
+body {
+    font-family: 'Oswald', Verdana, Arial, sans-serif;
+}
+/**Sets the correct display size for the card content div*/
+#card-content {
+    text-align: center;
+    font-size: 28px;
+    padding-bottom: 20px;
+}
+/**Sets the correct display size for the corresponding divs in the html file*/
+#alphabet, #results {
+    text-align: center;
+    font-size: 28px;
+    padding-bottom: 20px;
+}

@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!--
+            Title: mccue-alphabet-game.html
+            Author: Walter McCue
+            Date: 07/17/22
+            Description: This assignment will show that I understand how to use javascript arrays.
+            References: https://www.w3schools.com/ ; WEB 231 GitHub Repository
+        -->
+        <title>WEB 231 - Enterprise JavaScript I</title>
+        <link href="mccue-alphabet-game.css" type="text/css" rel="stylesheet" />
+        <link href="../global.css" type="text/css" rel="stylesheet" />
+        <link href="../site.css" type="text/css" rel="stylesheet" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <h1 class="app-header">Welcome to the Alphabet Game!</h1>
+        <!--copied the container/card div layout from mccue-javazon.html and changed values as needed-->
+        <div id="container">
+            <div class="card">
+                <div class="card-title">
+                    Alphabet Number Form
+                </div>
+                <div class="card-content">
+                    <div class="form">
+                        <div class="form-field">
+                            <label for="alphabetInput">Alphabet Letter Position:</label>
+                            <input id="txtPosition" type="text" name="alhpabetInput" />
+                        </div>
+                        <div class="form-field">
+                            <button type="submit" class="btn btn-primary full-width" id="btnFindLetter" onclick="btnFindLetter()">Find Letter</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="return-home" href="../index.html">Return</a>
+        <br><br>
+        <!--Copied my default div layout and edited as needed to display the alphabet-->
+        <div class="card" id="alphabetDisplay">
+            <div class="card-title">
+                Letters in the Alphabet
+            </div>
+            <div class="card-content" id="alphabet">
+            </div>
+        </div>
+        <br>
+        <!--Copied my default div layout and edited as needed to display the results-->
+        <div class="card" id="resultsDisplay">
+            <div class="card-title">
+                Results
+            </div>
+            <div class="card-content" id="results">
+            </div>
+        </div>
+        <script>
+        // Creates and displays the alphabet array
+            let alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+            let alphabetOutput = "";
+            for (i in alphabet) {
+                alphabetOutput += alphabet[i] + ', ';
+            }
+            document.getElementById('alphabet').innerHTML = alphabetOutput.slice(0,-1);
+            document.getElementById('resultsDisplay').style.display = "none";
+        // The following displays letter position when the button is clicked
+            function btnFindLetter() {
+                let pos = document.getElementById('txtPosition').value;
+                let letter = alphabet[pos - 1];
+                if (letter === undefined) {
+                    document.getElementById('resultsDisplay').style.display = "block";
+                    document.getElementById('results').innerHTML = "There are not " + pos + " letters in the alphabet";
+                }
+                else {
+                    document.getElementById('resultsDisplay').style.display = "block";
+                    document.getElementById('results').innerHTML = letter + " is at position " + pos + " in the alphabet";
+                }
+            }
+        </script>
+    </body>
+</html>
