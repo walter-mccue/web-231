@@ -1,0 +1,18 @@
+/**
+Title: mccue-card-game.css
+Author: Walter McCue
+Date: 07/24/22
+Description: Styling for mccue-card-game.html
+*/
+
+/**Sets the text/elements to center*/
+.player-card {
+    text-align: center;
+}
+/**Sets the shuffled cards into evenly spaced columns*/
+#shuffledCards {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    padding: 10px;
+    grid-gap: 10px;
+}
